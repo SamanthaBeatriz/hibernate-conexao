@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<!-- Configurações do banco de dados -->
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost/aula?useTimezone=true&amp;serverTimezone=UTC</property>
+<property name="connection.username">root</property>
+<property name="connection.password"></property>
+
+<!-- Pool de Conexoes (use the built-in) -->
+<property name="connction.pool_size">100</property>
+
+<!-- Dialeto SQL -->
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+<!-- mabilit gerenciamento -->
+<property name="current_session_context_class">thread</property>
+
+<!-- mostra sql -->
+<property name="show_sql">true</property>
+
+<!-- Apaga e recria o banco ao iniciar -->
+<property name="hbm2ddl">update</property>
+
+</session-factory>
+</hibernate-configuration>
